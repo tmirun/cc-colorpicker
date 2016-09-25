@@ -1,0 +1,18 @@
+<g>
+    <rect   ng-attr-x="{{vm.x}}"
+            ng-attr-y="{{vm.y}}"
+            ng-attr-width="{{vm.width}}"
+            ng-attr-height="{{vm.height}}"
+            ng-attr-fill="{{vm.color}}"
+            cc-drag
+            on-drag-start="vm.dragCallback"
+            on-dragged="vm.dragCallback"/>
+
+    <circle ng-attr-cx="{{vm.selectX}}"
+            ng-attr-cy="{{vm.selectY}}"
+            ng-attr-r="{{vm.selectR}}"
+            ng-attr-fill="{{vm.selectColor}}"
+            cc-drag
+            on-drag-start="vm.dragCallback"
+            on-dragged="vm.dragCallback" />
+</g>

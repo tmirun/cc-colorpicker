@@ -1,0 +1,53 @@
+<svg width=610 height=400 id="colorpickers-hsl">
+    <svg-circle-slider  value="vm.color.h"
+                        colors="vm.hueGradients"
+                        cx=200
+                        cy=200
+                        r=160
+                        width=20
+                        segment-num={{vm.hueSegmentNum}}
+                        select-r=18
+                        select-color=vm.selectColor ></svg-circle-slider>
+
+    <svg-circle-slider  value="vm.color.h"
+                        colors="vm.hueDig1Colors"
+                        cx=200
+                        cy=200
+                        r=120
+                        width=20
+                        init-rotate={{-360/vm.hueDig1SegmentNum/2}}
+                        is-digital=true
+                        segment-num={{vm.hueDig1SegmentNum}}
+                        select-color=vm.selectColor ></svg-circle-slider>
+
+    <svg-circle-slider  value="vm.color.h"
+                        colors="vm.hueDig2Colors"
+                        cx=200
+                        cy=200
+                        r=100
+                        width=21
+                        init-rotate={{-360/vm.hueDig2SegmentNum/2}}
+                        is-digital=true
+                        segment-num={{vm.hueDig2SegmentNum}}
+                        select-color=vm.selectColor ></svg-circle-slider>
+
+    <rect x=140 y=140 width=120 height=120 ng-attr-fill="{{vm.selectColor}}" />
+
+    <svg-slider-v   value="vm.color.s"
+                    color="vm.satColor"
+                    x="450"
+                    y="40"
+                    width="20"
+                    height="320"
+                    inverse="true"
+                    select-color="vm.selectColor" ></svg-slider-v>
+
+    <svg-slider-v   value="vm.color.l"
+                    color="vm.ligColor"
+                    x="560"
+                    y="40"
+                    width="20"
+                    height="320"
+                    inverse="true"
+                    select-color="vm.selectColor" ></svg-slider-v>
+</svg>

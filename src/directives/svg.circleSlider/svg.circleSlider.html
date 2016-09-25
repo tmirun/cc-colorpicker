@@ -1,0 +1,18 @@
+<g>
+    <path ng-if="vm.segments" ng-repeat="item in vm.segments track by $index"
+          ng-attr-d="{{item.path}}"
+          ng-attr-transform={{"rotate("+vm.segmentRotate($index)+","+vm.cx+","+vm.cy+")"}}
+          ng-attr-fill={{item.color}}
+          cc-drag
+          on-drag-start="vm.dragCallback"
+          on-dragged="vm.dragCallback" />
+
+    <circle ng-show="!vm.isDigital"
+            ng-attr-cx="{{vm.selectCx}}"
+            ng-attr-cy="{{vm.selectCy}}"
+            ng-attr-r="{{vm.selectR}}"
+            ng-attr-fill="{{vm.selectColor}}"
+            cc-drag
+            on-drag-start="vm.dragCallback"
+            on-dragged="vm.dragCallback" />
+</g>
